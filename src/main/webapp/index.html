@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Imposta la codifica dei caratteri e il titolo della pagina -->
+
+	<meta charset="UTF-8">
+	<title>Pagina Professionale Dinamica</title>
+	<!-- Collega il CSS di Bootstrap per lo styling della pagina -->
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		/* Stili aggiuntivi */
+		/* Definisce gli stili aggiuntivi per la pagina */
+
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+		}
+
+		.navbar,
+		.footer {
+			background-color: #333;
+			color: white;
+		}
+
+		.content {
+			padding: 40px;
+			color: white;
+			/* Colore del testo impostato su bianco */
+			font-weight: bold;
+			/* Testo più grosso */
+		}
+
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #6c757d;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		h1 {
+			font-size: 2.5em;
+			/* Dimensione più grande per h1 */
+		}
+
+		/* Stile per i bottoni con effetto neon */
+
+
+		.btn-neon {
+
+			background-color: #00ff00;
+			/* Colore di sfondo verde neon */
+			color: #fff;
+			/* Testo bianco */
+			border: none;
+			/* Rimuovi il bordo */
+			padding: 10px 20px;
+			/* Spaziatura interna del pulsante */
+			border-radius: 5px;
+			/* Bordi arrotondati */
+			box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
+			/* Effetto ombra neon */
+			transition: background-color 0.3s, box-shadow 0.3s;
+			/* Transizioni per il cambio di colore di sfondo e l'effetto ombra */
+			animation: neon 1.5s infinite alternate;
+			/* Animazione neon */
+
+		}
+
+		/* Animazione per l'effetto neon */
+
+		@keyframes neon {
+			0% {
+				opacity: 0.5;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		/* Stile al passaggio del mouse sui bottoni neon */
+
+		.btn-neon:hover {
+			background-color: #333;
+			/* Cambia il colore di sfondo a grigio scuro quando passi sopra */
+			box-shadow: none;
+			/* Rimuovi l'effetto ombra quando passi sopra */
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Effetto sfondo con particelle -->
+
+	<div id="particles-js"></div>
+	<!-- Barra di navigazione -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="#">Logo</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Features</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Sezione del contenuto principale -->
+
+	<div class="content text-center">
+		<h1>Sistema informativo </h1>
+		<p>Questa è una dimostrazione di una pagina web dinamica.</p>
+		<!-- Altri contenuti... -->
+	</div>
+	<!-- Footer della pagina -->
+
+	<div class="footer text-center p-4">
+		© 2023 Itis Molinari
+	</div>
+	<!-- Sezione di accesso al sistema -->
+
+	<div class="content text-left" style="max-width: 300px; margin: 0 auto;">
+		<h2>Accedi al Menu</h2>
+		<!-- Form per l'accesso -->
+
+		<div class="form-group">
+			<input type="text" id="username" name="username" class="form-control" placeholder="Nome utente"
+				style="width: 100%;" required>
+		</div>
+
+		<div class="form-group">
+			<input type="password" id="password" name="password" class="form-control" placeholder="Password"
+				style="width: 100%;" required>
+		</div>
+		<form action="myServlet" method="get">
+
+			<button type="submit" class="btn btn-primary btn-neon" style="width: 100%;">Accedi</button>
+		</form>
+	</div>
+	<!-- Script per l'effetto particelle, jQuery, Popper.js e Bootstrap JS -->
+
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS.load('particles-js', 'particles.json', function () {
+			console.log('particles.js loaded - callback');
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
